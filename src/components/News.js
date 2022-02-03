@@ -55,7 +55,7 @@ const News = (props) => {
                 <div className="row " style={{ padding: "80px 20px 30px 20px" }}>
                     <h2 className="text-center">
                         NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headline
-            </h2>
+                    </h2>
                 </div>
                 {loading && <Spinner />}
                 <InfiniteScroll
@@ -64,10 +64,10 @@ const News = (props) => {
                     hasMore={articles.length !== totalResults}
                     loader={<Spinner />}
                 >
-                    <div className="row" style={{ height: "100%" }}>
+                    <div className="row my-4" style={{ height: "100%" }}>
                         {articles.map((element) => {
                             return (
-                                <div className="col-md-4" key={element.url}>
+                                <div className="col-md-4 mb-4" key={element.url}>
                                     <NewsItem
                                         title={element.title ? element.title : ""}
                                         description={
@@ -89,6 +89,7 @@ const News = (props) => {
                             );
                         })}
                     </div>
+                    <br/>
                 </InfiniteScroll>
 
             </div>

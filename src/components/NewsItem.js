@@ -4,8 +4,9 @@ const NewsItem = (props) => {
   let { title, description, imgUrl, newsUrl, author, date, source } =
     props;
   return (
-    <div className="my-3">
-      <div className="card" style={{ width: "100%" }}>
+    <div className="my-3 h-100">
+
+      <div className="card h-100" style={{ width: "100%"}}>
         <div>
           <span
             class="badge bg-danger"
